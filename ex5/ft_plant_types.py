@@ -20,7 +20,7 @@ class Plant:
 
     def get_age(self):
         return self._age_days
-    
+
     def set_age(self, age_days):
         if age_days < 0:
             print(f"{self.name}: Error, age can't be negative")
@@ -43,7 +43,7 @@ class Flower(Plant):
         self._bloomed = False
 
     def bloom(self):
-            self._bloomed = True
+        self._bloomed = True
 
     def show(self):
         super().show()
@@ -53,10 +53,11 @@ class Flower(Plant):
         else:
             print(f" {self.name} has not bloomed yet")
 
+
 class Tree(Plant):
     def __init__(self, name, height, age_days, trunk_diameter):
         super().__init__(name, height, age_days)
-        self.trunk_diameter =  float(trunk_diameter)
+        self.trunk_diameter = float(trunk_diameter)
         self._shade = False
 
     def produce_shade(self):
@@ -68,12 +69,13 @@ class Tree(Plant):
         if self._shade:
             print(f"Tree {self.name} now produces a shade of {self._height}cm long and {self.trunk_diameter}cm wide.")
 
+
 class Vegetable(Plant):
     def __init__(self, name, height, age_days, harvest_season):
         super().__init__(name, height, age_days)
         self._harvest_season = harvest_season
         self._nutritional_value = 0
-        
+
     def grow(self):
         super().grow()
         self._nutritional_value += 1
@@ -85,7 +87,6 @@ class Vegetable(Plant):
         super().show()
         print(f" Harvest season: {self._harvest_season}")
         print(f" Nutritional value: {self._nutritional_value}")
-
 
 
 if __name__ == "__main__":
@@ -107,5 +108,3 @@ if __name__ == "__main__":
         patato.grow()
         patato.age()
     patato.show()
-    
-    

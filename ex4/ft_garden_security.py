@@ -20,7 +20,7 @@ class Plant:
 
     def get_age(self):
         return self._age_days
-    
+
     def set_age(self, age_days):
         if age_days < 0:
             print(f"{self.name}: Error, age can't be negative")
@@ -39,6 +39,5 @@ if __name__ == "__main__":
     rose.set_age(30)
     rose.set_height(-10)
     rose.set_age(-5)
-    print("Current state: ", end= "")
+    print("Current state: ", end="")
     rose.show()
-
