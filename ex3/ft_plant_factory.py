@@ -1,6 +1,9 @@
 class Plant:
     def show(self):
-        print(f"Created: {self.name}: {self.height}cm, {self.age_days} days old")
+        print(
+            f"Created: {self.name}: {self.height}cm,"
+            f"{self.age_days} days old"
+        )
 
     def __init__(self, name, height, age_days):
         self.name = name

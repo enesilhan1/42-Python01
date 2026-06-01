@@ -54,7 +54,10 @@ class Plant:
             self._show_count = 0
 
         def display(self):
-            print(f"Stats: {self._grow_count} grow, {self._age_count} age, {self._show_count} show")
+            print(
+                f"Stats: {self._grow_count} grow,"
+                f"{self._age_count} age, {self._show_count} show"
+            )
 
 
 def display_stats(plant):
@@ -94,7 +97,10 @@ class Tree(Plant):
         super().show()
         print(f" Trunk diameter: {self.trunk_diameter}")
         if self._shade:
-            print(f"Tree {self.name} now produces a shade of {self._height}cm long and {self.trunk_diameter}cm wide.")
+            print(
+                f"Tree {self.name} now produces a shade of"
+                f"{self._height}cm long and {self.trunk_diameter}cm wide."
+            )
 
 
 class Vegetable(Plant):
